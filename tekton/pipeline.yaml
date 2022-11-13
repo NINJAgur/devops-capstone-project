@@ -75,6 +75,7 @@ spec:
         kind: ClusterTask
       params:
       - name: IMAGE
-        value: "$(params.build-image)"
+        value: image-registry.openshift-image-registry.svc:5000/us.icr.io/sn-labs-edangur11/accounts:1/accounts:1
       runAfter:
-        - clone
+        - lint
+        - tests
